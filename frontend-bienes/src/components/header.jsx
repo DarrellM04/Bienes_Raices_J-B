@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router";
 import './header.css'
 
 function Header(){
@@ -16,16 +17,15 @@ function Header(){
     return(
     <header className= {`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-content">
-            <div className="logo">
-            <img src="/Logo_prueba.png" alt="Logo B&J" className="logo-img"></img>    
-            </div>
-            <h1>Bienes Raices Jimenez&Bogarin</h1>
-        </div>
+            <Link to="./" className="logo">
+                <img src="/Logo_prueba.png" alt="Logo B&J" className="logo-img"></img>    
+            </Link>
         <nav className="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#propiedades">Propiedades</a>
-            <a href="#contacto">Contacto</a>
+            <Link to="/">Inicio</Link>
+            <Link to="/propiedades">Propiedades</Link>
+            <Link to="/contacto">Contacto</Link>
         </nav>
+        </div>
     </header>
     );
 }

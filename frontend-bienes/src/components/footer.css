@@ -1,0 +1,15 @@
+.footer {
+  position: sticky;
+  z-index: 1000;
+  background: #89986D;
+  /*https://colorhunt.co/ visitar para tener 
+  una mejor interfaz visual
+  https://colorhunt.co/palette/f6f0d7c5d89d9cab8489986d*/
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.footer-content{
+    display: grid;
+}
