@@ -3,6 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
+//importar el properties
+import { PropertiesModule } from './properties/properties.module'
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -11,6 +14,8 @@ import { AppService } from './app.service';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // Solo para desarrollo
     }),
+    //importar el module de las propiedades
+    PropertiesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
