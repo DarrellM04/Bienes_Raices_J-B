@@ -8,7 +8,7 @@ function Hero() {
       <p>Bienes raíces con confianza y claridad</p>
 
       <Link to="/propiedades" className="hero-button">
-        Ver propiedades
+      Ver propiedades
       </Link>
     </section>
   );

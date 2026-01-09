@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('properties')
+@Controller('/api/properties')
 export class PropertiesController {
   @Get()
   findAll() {
@@ -9,14 +9,14 @@ export class PropertiesController {
         id: 1,
         title: 'Casa en Escazu',
         price: 250000,
-        location: 'Escazu'
+        location: 'Escazu',
       },
       {
         id: 2,
         title: 'Terreno en Heredia',
         price: 120000,
-        location: 'Heredia'
-     }
+        location: 'Heredia',
+      },
     ];
   }
 }
