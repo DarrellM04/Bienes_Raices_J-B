@@ -18,8 +18,8 @@ function Header(){
     <header className= {`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-content">
             <Link to="./" className="logo">
-                <img src="/Logo_prueba.png" alt="Logo B&J" className="logo-img"></img>    
-            </Link>
+                <img src="/logo_prueba3.png" alt="Logo B&J" className="logo-img"></img>    
+            </Link> 
         <nav className="nav">
             <Link to="/">Inicio</Link>
             <Link to="/propiedades">Propiedades</Link>

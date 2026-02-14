@@ -1,6 +1,18 @@
 .App {
   text-align: center;
-  background-color: #61dafb;
+  --primary: #1f3a5f;    /* azul profundo (confianza) */
+  --secondary: #e8f1f8;  /* azul muy claro */
+  --accent: #c9a24d;     /* dorado suave (valor) */
+  --background: #f7f9fb; /* fondo limpio */
+  --text-dark: #1c1c1c;
+  /*background-color: #5edcff;*/
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+div{
+  display: grid;
+  
 }
 
 .App-logo {
@@ -15,14 +27,14 @@
 }
 
 .App-content {
-  background-color: #F6F0D7;
+  background-color: var(--background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-dark);
 }
 
 .App-link {

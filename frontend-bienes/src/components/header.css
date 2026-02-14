@@ -1,8 +1,10 @@
 .header {
+  --primary: #1f3a5f;
+  --text-dark: #1c1c1c;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #89986D ;
+  background: var(--primary);
   /*https://colorhunt.co/ visitar para tener 
   una mejor interfaz visual*/
   backdrop-filter: blur(20px);
@@ -76,9 +78,6 @@
   .header-content {
     flex-direction: row;
     gap: 20px;
-  }
-  h1{
-
   }
   .nav {
     gap: 20px;
