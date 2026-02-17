@@ -3,10 +3,9 @@ import "./hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero bg-transparent">
       <h1>J&B Jiménez & Bogarín</h1>
-      <Link to="/propiedades" className="hero-button">
-      
+      <Link to="/propiedades" className="hero-button btn">
       Ver propiedades
       </Link>
     </section>

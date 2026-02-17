@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import "./properties.css"
+import { get_Properties } from '../services/get_properties';
 
 function Properties() {
     const [properties, setProperties] = useState([]);
@@ -7,22 +8,13 @@ function Properties() {
     const [error , setError ] = useState(null);
     
     useEffect(() => {
-        fetch('http://localhost:3000/api/properties')
-        .then(res => {
-            if (!res.ok) throw new Error("Error al cargar Propiedades")
-                return res.json();
-        })
-        .then(data => {
-            setProperties(data);
-            setLoading(false);
-        })
-        .catch(err => {
-            setError(err.message);
-            setLoading(false);
-        });
-    }, []);
+        get_Properties()
+        .then(setProperties)
+        .catch(err => setError(err.message))
+        .finally(() => setLoading(false));
+        }, []);
 
-    if (loading) return <p>Cargando Propiedades...</p>;
+    if (loading) return <p>Cargando...</p>;
     if (error) return <p> {error}</p>;
 
     return(
@@ -40,7 +32,7 @@ function Properties() {
                     <p className='location'> {property.location}</p>
                     <p className='price'> {property.price}</p>
 
-                    <button> Ver detalle</button>
+                    <button className='btn btn-primary'> Ver detalle</button>
                    </div>
                    </div> 
                 ))}
