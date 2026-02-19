@@ -1,3 +1,6 @@
+//link hacia la propiedad
+import { Link } from 'react-router-dom';
+
 import { useEffect, useState } from 'react';
 import "./properties.css"
 import { get_Properties } from '../services/get_properties';
@@ -31,8 +34,10 @@ function Properties() {
                     <h3>{property.title}</h3>
                     <p className='location'> {property.location}</p>
                     <p className='price'> {property.price}</p>
-
-                    <button className='btn btn-primary'> Ver detalle</button>
+                    {/* Redirecciona al propertydetail */}
+                    <Link className='link' to={`/propiedades/${property.id}`} >
+                        <button className='btn btn-primary'> Ver detalle</button>
+                    </Link>
                    </div>
                    </div> 
                 ))}

@@ -4,7 +4,6 @@ import './header.css'
 
 function Header(){
     const [scrolled, setScrolled] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(()=> {
         const handleScroll = () => {
@@ -17,14 +16,16 @@ function Header(){
     return(
     <header className= {`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="header-content">
-            <Link to="./" className="logo">
-                <img src="/logo_prueba3.png" alt="Logo B&J" className="logo-img"></img>    
-            </Link> 
-        <nav className="nav">
-            <Link to="/">Inicio</Link>
-            <Link to="/propiedades">Propiedades</Link>
-            <Link to="/contacto">Contacto</Link>
-        </nav>
+              <nav className="navbar-expand-lg">
+                    <Link to="./" className="logo">
+                        <img src="/logo_prueba3.png" alt="Logo B&J" className="logo-img"></img>    
+                    </Link> 
+                </nav>
+                <nav className="nav">
+                    <Link to="/">Inicio</Link>
+                    <Link to="/propiedades">Propiedades</Link>
+                    <Link to="/contacto">Contacto</Link>
+                </nav>
         </div>
     </header>
     );

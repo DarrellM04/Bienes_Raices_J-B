@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 
 import Home from "./pages/home";
 import Properties from "./pages/properties";
+import PropertyDetail from "./pages/propertyDetail"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/propiedades" element={<Properties />} />
+          <Route path='/propiedades/:id' element={<PropertyDetail/>} />
         </Routes>
       </div>
 

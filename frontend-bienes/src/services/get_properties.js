@@ -9,6 +9,8 @@ export async function get_Properties() {
 
 export async function getPropertiesByID(id) {
     const res = await fetch(`${API_URL}/${id}`);
-    if (!res.ok) throw new Error("Propiedad no encontrada");
+    if (!res.ok) {
+        throw new Error("Propiedad no encontrada");
+    }
     return res.json();
 }
