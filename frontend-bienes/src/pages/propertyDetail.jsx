@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import Gallery from "../components/gallery";
+
 import { getPropertiesByID } from "../services/get_properties";
 
 function PropertyDetail(){
@@ -35,16 +37,17 @@ function PropertyDetail(){
 
     return(
         <section className="container">
-            <h3>Texto</h3>
-            <div className="carousel">
-            <div className="carousel slide">
-                <img className="d-block w-100" src={property.image} alt="img-house" />
-            </div>
-            </div>
+            <div className="container-content">
+            {property && <Gallery images={property.images} />}
+            {console.log(property.images)}
+            {console.log( typeof property.images)}   
+            <aside>
             <h2>{property.title}</h2>
             <p> {property.location}</p>
             <p> {property.price}</p>
             <p> {property.description}</p>
+            </aside>
+            </div>
             
         </section>
     );

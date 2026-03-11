@@ -27,7 +27,7 @@ function Properties() {
                 {properties.map(property => (
                    <div className='property-card' key={property.id}> 
                    <div className='property-image'>
-                    <img src={property.image} alt='propiedad'/> 
+                    <img src={property.images[0]} alt='propiedad'/> 
                    </div>
 
                    <div className='property-info'>
